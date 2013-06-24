@@ -1,0 +1,87 @@
+/* cKelly Design Redesign - 2013 */
+
+body {
+	background-color: #1a1a1a;
+	line-height: 0;
+}
+
+/* ---------- Typography ---------- */
+
+@font-face {
+	font-family: 'Rockwell Light';
+	src: url('../gfx/RockwellStd-Light.otf') format('opentype'),
+		 url('../gfx/RockwellStd-Light.ttf') format('truetype'),
+		 url('../gfx/RockwellStd-LightItalic.otf') format('opentype'),
+		 url('../gfx/RockwellStd-LightItalic.ttf') format('truetype');
+	font-weight: light;
+}
+
+h1, h2 {
+	font-family: 'Rockwell Light', Georgia, Times, serif;
+	color: #d9d9d9;
+}
+h3, h4, h5, h6 {
+	font-family: Georgia, Times, serif;
+	font-style: italic;
+	font-weight: bold;
+	color: #f2f2f2;
+}
+h1 {
+	font-size: 48px;
+	line-height: 48px;
+}
+h2 {
+	font-size: 36px;
+	line-height: 36px;
+}
+h3 {
+	font-size: 24px;
+	line-height: 24px;
+}
+h4, h5, h6 {
+	font-size: 18px;
+	line-height: 18px;
+}
+p {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	color: #f2f2f2;
+	margin-bottom: 21px;
+}
+a, a:visited {
+	color: #4ebffd;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	text-decoration: none;
+}
+a:hover {
+	color: #477725;
+}
+a:active, a:focus {
+	color: #477725;
+	text-decoration: underline;
+}
+ul li, ol li {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	color: #f2f2f2;
+	margin-bottom: 21px;
+}
+
+
+/* ---------- Navigation ---------- */
+
+div#mobNav {
+	display: none;
+}
+div#mobNav ul,
+div#deskNav ul {
+	list-style: none;
+}
+div#deskNav ul li {
+	float: left;
+}
+
