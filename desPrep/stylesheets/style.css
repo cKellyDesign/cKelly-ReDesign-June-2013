@@ -6,7 +6,7 @@ body {
 }
 
 /* ---------- Typography ---------- */
-
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic);
 @font-face {
 	font-family: 'Rockwell Light';
 	src: url('../gfx/RockwellStd-Light.otf') format('opentype'),
@@ -16,12 +16,13 @@ body {
 	font-weight: light;
 }
 
+
 h1, h2 {
 	font-family: 'Rockwell Light', Georgia, Times, serif;
 	color: #d9d9d9;
 }
 h3, h4, h5, h6 {
-	font-family: Georgia, Times, serif;
+	font-family: 'Libre Baskerville', Georgia, Times, serif;
 	font-style: italic;
 	font-weight: bold;
 	color: #f2f2f2;
@@ -70,6 +71,48 @@ ul li, ol li {
 	color: #f2f2f2;
 	margin-bottom: 21px;
 }
+/* ---------- Background ---------- */
+div#const, 
+div#starPar {
+	min-height: 100%;
+	width: 100%;
+}
+div#starPar {
+	background: transparent url(../images/stars.png) repeat center center fixed;
+	background-size: 100% auto;
+}
+
+
+
+/* ---------- Landing/Logo ---------- */
+
+div#logo-body {
+	height: 500px;
+	background-image: url(../images/logo.png);
+	background-color: transparent;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: .5s;
+}
+div#logo-body.landed {
+	height: 500px;
+}
+div#logo-body.scrolling {
+	position: fixed;
+	width: 940px;
+	transform: rotate3d(1, 0, 0, 70deg);
+	-ms-transform:rotate3d(1, 0, 0, 70deg);
+	-webkit-transform: rotate3d(1, 0, 0, 70deg);
+	
+}
+@media only screen and (max-width: 959px) {
+	div#logo-body {
+		
+	}
+}
+#logo-container {
+	margin-top: 36px;
+}
 
 
 /* ---------- Navigation ---------- */
@@ -83,5 +126,52 @@ div#deskNav ul {
 }
 div#deskNav ul li {
 	float: left;
+	margin-top: 6px;
+}
+div#deskNav > nav > ul > li > a {
+	border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Rockwell Light', Georgia, Times, serif;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 18px;
+    text-align: center;
+}
+div#deskNav > nav > ul > li > a:hover {
+	color: #4ebffd;
+	border-bottom: 1px solid #4ebffd;
+}
+div#deskNav > nav > ul > li:hover {
+	
+}
+div#deskNav > nav > ul {
+	display: inline-block;
+}
+div#deskNav.stickToTop {
+	position: fixed;
+	top: 0px;	
+	z-index: 100;
+}
+div#deskNav.stickToTop > nav > ul {
+	background-color: #000000;
+	background-color: rgba(0,0,0,0.75);
+	
 }
 
+
+
+
+/* --------- Content Area ---------- */
+
+section#content-container p {
+	opacity: 1;
+}
+section#content-container blockquote {
+	font: 30px/36px 'Libre Baskerville', Georgia, Times, serif;
+	font-style: italic;
+	color: #efefef;
+	margin: 150px 100px;
+    padding: 0;
+    border-left: none;
+}

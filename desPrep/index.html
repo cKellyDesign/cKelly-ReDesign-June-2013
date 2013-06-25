@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/layout.css">
 	<link rel="stylesheet" href="stylesheets/style.css">
-
+	<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -34,37 +34,81 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
+	<!-- Scripts
+	================================================== -->
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src ="scripts/cKDjs.js"></script>
+
 </head>
 <body>
 	<div id="const">
 		<div id="starPar">
-			<header>
-				<div id="mobNav">
-					<nav>
-						<ul>
-							<li><a href="#">Section 1</a></li>
-							<li><a href="#">Section 1</a></li>
-							<li><a href="#">Section 1</a></li>
-							<li><a href="#">Section 1</a></li>
-						</ul>
-					</nav>
-				</div> <!-- end mobile navigation -->
-				<div id="logo-container">
+			<section id="header-container" class="container">
+				
+				
+				
+				<header>
 					
-				</div> <!-- end logo container -->
-				<div id="deskNav">
-					<nav>
-						<ul>
-							<li><a href="#">Section 1</a></li>
-							<li><a href="#">Section 1</a></li>
-							<li><a href="#">Section 1</a></li>
-							<li><a href="#">Section 1</a></li>
-						</ul>
-					</nav>
-				</div> <!-- end dektop navigation -->
-			</header>
-		
-		
+					<div id="mobNav" class="sixteen columns alpha omega">
+						<nav>
+							<ul>
+								<li class="four columns alpha"><a href="#">Section 1</a></li>
+								<li class="four columns"><a href="#">Section 2</a></li>
+								<li class="four columns"><a href="#">Section 3</a></li>
+								<li class="four columns omega"><a href="#">Section 4</a></li>
+							</ul>
+						</nav>
+					</div> <!-- end mobile navigation -->
+					<div class="sixteen columns" id="logo-container">
+						<a href="">
+							<div id="logo-body" class="landed">
+								
+							</div> <!-- end logo container -->
+						</a>
+					</div>
+					<div id="deskNav">
+						<nav>
+							<ul>
+								<li class="four columns alpha"><a href="#">Section 1</a></li>
+								<li class="four columns"><a href="#">Section 2</a></li>
+								<li class="four columns"><a href="#">Section 3</a></li>
+								<li class="four columns omega"><a href="#">Section 4</a></li>
+							</ul>
+						</nav>
+					</div> <!-- end dektop navigation -->
+				</header>
+			
+			</section> <!-- end header-container -->
+			<section class="container" id="content-container">
+				<blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum tristique facilisis. Suspendisse at tempor felis. Fusce id dolor ac dui ultricies hendrerit et at diam. </blockquote>
+				<div class="one-third column alpha">
+					<h3>Header Number 1</h3>
+					<p>Cras cursus tincidunt nibh, ac dapibus arcu aliquam sed. Aenean sollicitudin tristique interdum. Donec ultricies nec orci ut interdum. Nullam venenatis condimentum egestas. Fusce rutrum risus in fermentum fringilla. Nullam mattis nec ligula ac viverra. Proin mi tellus, lacinia ut mollis vel, sollicitudin eu ante.</p>
+				</div>
+				<div class="one-third column">
+					<h3>Header Number 2</h3>
+					<p>Cras cursus tincidunt nibh, ac dapibus arcu aliquam sed. Aenean sollicitudin tristique interdum. Donec ultricies nec orci ut interdum. Nullam venenatis condimentum egestas. Fusce rutrum risus in fermentum fringilla. Nullam mattis nec ligula ac viverra. Proin mi tellus, lacinia ut mollis vel, sollicitudin eu ante.</p>
+				</div>
+				<div class="one-third column omega">
+					<h3>Header Number 3</h3>
+					<p>Cras cursus tincidunt nibh, ac dapibus arcu aliquam sed. Aenean sollicitudin tristique interdum. Donec ultricies nec orci ut interdum. Nullam venenatis condimentum egestas. Fusce rutrum risus in fermentum fringilla. Nullam mattis nec ligula ac viverra. Proin mi tellus, lacinia ut mollis vel, sollicitudin eu ante.</p>
+				</div>
+				
+				
+				
+<!--				<div class="eight columns offset-by-four">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum tristique facilisis. Suspendisse at tempor felis. Fusce id dolor ac dui ultricies hendrerit et at diam. Sed tempor facilisis consequat. Vestibulum nisl felis, varius sed blandit nec, suscipit vitae ante. Proin cursus magna sed nunc porta, at molestie justo varius. Morbi at eros ut neque mattis blandit quis et sapien. Phasellus pretium viverra dui eu euismod. Cras eget venenatis magna, a adipiscing sapien. Vestibulum vehicula metus vitae turpis varius, sed dignissim urna rutrum. Integer suscipit pretium metus, quis tincidunt erat tincidunt at. Quisque luctus quam nec dignissim tempus. Praesent accumsan nulla eget orci ultricies semper. Etiam pulvinar dui id venenatis eleifend.</p>
+
+<p>Cras cursus tincidunt nibh, ac dapibus arcu aliquam sed. Aenean sollicitudin tristique interdum. Donec ultricies nec orci ut interdum. Nullam venenatis condimentum egestas. Fusce rutrum risus in fermentum fringilla. Nullam mattis nec ligula ac viverra. Proin mi tellus, lacinia ut mollis vel, sollicitudin eu ante. Quisque adipiscing bibendum metus, sit amet tincidunt erat malesuada rutrum. Sed et tellus ipsum. Suspendisse malesuada sapien mauris.</p>
+
+<p>Fusce nec sagittis velit. Aenean a faucibus tellus, eu congue dolor. Aenean faucibus a magna vitae vehicula. Aliquam egestas vitae purus vel pretium. Nunc eget velit laoreet, eleifend sem quis, dapibus urna. Quisque et odio quis nisi volutpat laoreet. Proin ac sollicitudin elit. Sed rhoncus libero vel velit iaculis, ut facilisis risus placerat. Nunc placerat, nulla at vestibulum luctus, massa diam sollicitudin felis, quis vehicula neque velit at nulla. Maecenas sed est erat. Pellentesque placerat metus tincidunt felis aliquet, eget facilisis arcu suscipit. Nullam congue tristique leo, ut iaculis erat aliquet rutrum. Fusce fringilla dignissim tellus. Quisque pellentesque enim neque, a scelerisque arcu tristique in.</p>
+
+<p>Maecenas viverra porttitor purus. Suspendisse et lacus nec dui malesuada laoreet ac eget augue. Fusce sodales suscipit tortor, pretium consequat orci. Donec pulvinar viverra massa. Pellentesque tristique, ligula eu luctus laoreet, massa diam tempor massa, sit amet tincidunt quam orci eget nibh. Proin sit amet lobortis odio, vel vehicula leo. Vestibulum porttitor odio eu justo convallis ullamcorper sed sed sem. Aliquam id odio purus. Phasellus quis quam tristique, porttitor risus vitae, eleifend tellus. Nam quis ipsum iaculis, malesuada mauris sed, commodo lorem. Morbi vitae imperdiet diam. Morbi rhoncus et diam ut elementum.</p>
+
+<p>Phasellus ut quam diam. Quisque ut mi sit amet ipsum sodales congue. Suspendisse condimentum neque nisi, eget venenatis felis sollicitudin vel. Suspendisse ligula nulla, fringilla at diam eget, malesuada vulputate urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce faucibus quam purus, eu bibendum tellus tempor sed. Curabitur eget mauris eget elit tincidunt faucibus non vitae felis. Praesent vehicula erat eget ligula placerat vehicula. </p>
+				</div> -->
+			</section> <!-- end content container -->
 		
 		
 		</div> <!-- end star paralax -->
