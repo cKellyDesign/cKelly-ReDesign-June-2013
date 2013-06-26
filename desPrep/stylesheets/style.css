@@ -128,7 +128,13 @@ div#deskNav ul li {
 	float: left;
 	margin-top: 6px;
 }
-div#deskNav > nav > ul > li > a {
+div#deskNav > nav > ul > li {
+	text-align: center;
+	background-color: #477725;
+	box-shadow: 3px 3px 0px 0px #000000;
+	-webkit-box-shadow: 3px 3px 0px 0px #000000;
+}
+/* div#deskNav > nav > ul > li > a {
 	border-bottom: 1px solid #FFFFFF;
     color: #FFFFFF;
     display: block;
@@ -136,11 +142,47 @@ div#deskNav > nav > ul > li > a {
     font-size: 24px;
     line-height: 36px;
     margin: 0 18px;
-    text-align: center;
+	
+}*/
+div#deskNav > nav > ul > li > a { /* box model */
+    margin: 3px;
+	display: block;
+	width: auto;
+	padding-top: 5px;
+	
+	box-shadow: 0 0 2px 0px #000000 inset;
+	-webkit-box-shadow: 0 0 2px 0px #000000 inset;
+
+	background: #3d95c6; /* Old browsers */	
+	background-image: url(../images/navaBG.jpg);
+	background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* W3C */
+	background-image: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%,   rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* FF3.6+ */
+	background-image: url("../images/navaBG.jpg"), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,.33))); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top,  rgba(0,0,0,0 0%) 0%,rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* IE10+ */
+	background-image: url("../images/navaBG.jpg")\9;
+	
+
+}
+div#deskNav > nav > ul > li > a { /* text styling */
+	font-family: 'Rockwell Light', Georgia, Times, serif;
+	color: #FFFFFF;
+	font-size: 24px;
+	line-height: 36px;
+	text-shadow: -1px -1px #595959;
+	-webkit-text-shadow: -1px -1px #595959;
 }
 div#deskNav > nav > ul > li > a:hover {
-	color: #4ebffd;
-	border-bottom: 1px solid #4ebffd;
+	background: #3d95c6; /* Old browsers */	
+	background-image: url(../images/navaBG.jpg);
+	background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* W3C */
+	background-image: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%,   rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* FF3.6+ */
+	background-image: url("../images/navaBG.jpg"), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,.15))); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top,  rgba(0,0,0,0 0%) 0%,rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* IE10+ */
+	background-image: url("../images/navaBG.jpg")\9;
 }
 div#deskNav > nav > ul > li:hover {
 	
@@ -167,11 +209,68 @@ div#deskNav.stickToTop > nav > ul {
 section#content-container p {
 	opacity: 1;
 }
-section#content-container blockquote {
+section#pitch-container blockquote {
 	font: 30px/36px 'Libre Baskerville', Georgia, Times, serif;
 	font-style: italic;
 	color: #efefef;
-	margin: 150px 100px;
+	margin: 125px 100px;
     padding: 0;
     border-left: none;
+}
+@media only screen and (max-width: 959px) {
+	section#pitch-container blockquote {
+		margin: 100px 50px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	section#pitch-container blockquote {
+		margin: 72px 18px;
+	}
+}
+@media only screen and (max-width: 479px) {
+	section#pitch-container blockquote {
+		margin: 36px 0px;
+	}
+}
+
+/* Highlights */
+section#highlights-container h3 {
+	font-family: 'Rockwell Light', Georgia, Times, serif;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 30px;
+}
+section#highlights-container div.column {
+	position: relative;
+}
+ul.highlight-list {
+	padding-left: 18px;
+	position: relative;
+}
+ul.highlight-list li {
+	font-family: 'Libre Baskerville', Georgia, Times, serif;
+	font-size: 21px;
+	font-style: italic;
+	position: relative;
+}
+ul.highlight-list:before {
+	content: '';
+	height: 105px;
+	border-left: 1px solid #fff;
+	position: absolute;
+	top: -10px;
+	left: 0;
+}
+ul.highlight-list li:before {
+	content: '';
+	height: 0px;
+	width: 0px;
+	border-color: transparent transparent transparent #ffffff;
+	border-style: solid;
+	border-width: 6px 0 6px 12px;
+	position: aboslute;
+	left: -18px;
+	top: 4px;
+	position: absolute;
+	display: block;
 }
