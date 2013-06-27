@@ -6,14 +6,14 @@ body {
 }
 
 /* ---------- Typography ---------- */
-@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic);
+@import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic");
 @font-face {
 	font-family: 'Rockwell Light';
 	src: url('../gfx/RockwellStd-Light.otf') format('opentype'),
 		 url('../gfx/RockwellStd-Light.ttf') format('truetype'),
 		 url('../gfx/RockwellStd-LightItalic.otf') format('opentype'),
 		 url('../gfx/RockwellStd-LightItalic.ttf') format('truetype');
-	font-weight: light;
+	font-weight: lighter;
 }
 
 
@@ -133,6 +133,8 @@ div#deskNav > nav > ul > li {
 	background-color: #477725;
 	box-shadow: 3px 3px 0px 0px #000000;
 	-webkit-box-shadow: 3px 3px 0px 0px #000000;
+	
+	transition: .5s;
 }
 /* div#deskNav > nav > ul > li > a {
 	border-bottom: 1px solid #FFFFFF;
@@ -188,32 +190,97 @@ div#deskNav > nav > ul > li:hover {
 	
 }
 div#deskNav > nav > ul {
-	display: inline-block;
+	display: block;
+	float: left;
+	transition: float .5s;
+	-webkit-transition: float .5s;
 }
 div#deskNav.stickToTop {
 	position: fixed;
 	top: 0px;	
 	z-index: 100;
-}
-div#deskNav.stickToTop > nav > ul {
+	display: block;
 	background-color: #000000;
 	background-color: rgba(0,0,0,0.75);
-	
+	margin-left: -15px;
+	padding: 6px 15px;
+}
+div#deskNav.stickToTop > nav > ul {
+/*	background-color: #000000;
+	background-color: rgba(0,0,0,0.75);
+*/
+	margin-bottom: 0;
+	float: right;
 }
 
+section#header-container.container div#deskNav li.one-third.column {
+	width: 300px;
+	margin-top: 30px;
+	margin-bottom: 34px;
+	transition: all .5s;
+	-webkit-transition: width .5s;
+}
+@media only screen and (max-width: 959px) {
+	section#header-container.container div#deskNav li.one-third.column {
+		width: 236px;
+	}
+}
+section#header-container.container div#deskNav li.one-third.column.alpha {
+	transition: padding-left .5s;
+	-webkit-transition: padding-left .5s;
+}
 
+/* section#header-container.container div#deskNav li.now */
+section#header-container.container div#deskNav.stickToTop li.one-third.column {
+	width: 220px !important;
+}
+@media only screen and (max-width: 959px) {
+	section#header-container.container div#deskNav.stickToTop li.one-third.column {
+		width: 172px !important;
+	}
+}
+div#deskNav li.logo  {
+	position: absolute;
+	display: block;
+	left: -999px;
+	transition: left .5s;
+	margin: 0;
+}
+@media only screen and (max-width: 959px) {
+
+}
+div#deskNav li.logo > a#stt-logo {
+	height: 112px;
+	width: 190px;
+	background: transparent url(../images/StickToTopLogo.png) center left no-repeat scroll;
+	position: absolute;
+	margin: 0;
+	padding: 0;	
+}
+div#deskNav li.logo > a#stt-logo > span {
+	opacity:0;
+}
+div#deskNav.stickToTop li.logo {
+	left: 15px;
+}
+div#deskNav.stickToTop li.logo > a#stt-logo {
+
+}
+div#deskNav.stickToTop li.logo > a#stt-logo > span {
+
+}
 
 
 /* --------- Content Area ---------- */
 
-section#content-container p {
-	opacity: 1;
+section#pitch-container {
+	padding: 125px 0;
 }
 section#pitch-container blockquote {
 	font: 30px/36px 'Libre Baskerville', Georgia, Times, serif;
 	font-style: italic;
 	color: #efefef;
-	margin: 125px 100px;
+	margin: 0 100px;
     padding: 0;
     border-left: none;
 }
@@ -239,6 +306,7 @@ section#highlights-container h3 {
 	font-style: normal;
 	font-weight: lighter;
 	font-size: 30px;
+	color: #87D5FF;
 }
 section#highlights-container div.column {
 	position: relative;
@@ -268,9 +336,21 @@ ul.highlight-list li:before {
 	border-color: transparent transparent transparent #ffffff;
 	border-style: solid;
 	border-width: 6px 0 6px 12px;
-	position: aboslute;
+	position: absolute;
 	left: -18px;
 	top: 4px;
 	position: absolute;
 	display: block;
+}
+
+/* ---------- Testing ---------- */
+
+div.page-spacer {
+	opacity: 0;
+	line-height: 0;
+	position: relative;
+	display: block;
+}
+div.page-spacer.bottom {
+	height: 600px;
 }
