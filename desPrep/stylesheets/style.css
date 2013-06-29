@@ -343,6 +343,56 @@ ul.highlight-list li:before {
 	display: block;
 }
 
+/* ---------- Gallery ---------- */
+section#gallery-container {
+	padding: 72px 0;
+}
+ul.galleryList {
+	
+}
+ul.galleryList li {
+	background-color: #808080;
+}
+ul.galleryList li a {
+	line-height: 0;
+}
+ul.galleryList li a div.thumbWrap {
+	width: auto;
+	margin: 4px;
+	position: relative;
+}
+ul.galleryList li a span {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/galThumbHoverBG.jpg);
+	box-shadow: 1px 1px 0px #999999;
+	-webkit-box-shadow: 1px 1px 0px #999999;
+	-moz-box-shadow: 1px 1px 0px #999999;
+	line-height: 72px;
+	text-align: center;
+	font-family: 'Rockwell Light', Georgia, Times, serif;
+	font-size: 24px;
+	color: #87D5FF;
+	text-shadow: -1px -1px 0px #000000;
+	-webkit-text-shadow: -1px -1px 0px #000000;
+	
+}
+ul.galleryList li a div.thumbWrap div.spanWrap {
+	display: block;
+	position: absolute;
+	width: auto;
+	height: auto;
+}
+ul.galleryList li a:hover div.thumbWrap span {
+	display: block;
+}
+ul.galleryList li a img {
+	width: 100%;
+	height: auto;
+}
+
 /* ---------- Testing ---------- */
 
 div.page-spacer {
