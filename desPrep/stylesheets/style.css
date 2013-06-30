@@ -15,14 +15,14 @@ body {
 		 url('../gfx/RockwellStd-LightItalic.ttf') format('truetype');
 	font-weight: lighter;
 }
-
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
 
 h1, h2 {
-	font-family: 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'Bitter', 'Rockwell Light', Georgia, Times, serif;
 	color: #d9d9d9;
 }
 h3, h4, h5, h6 {
-	font-family: 'Libre Baskerville', Georgia, Times, serif;
+	font-family: 'Bitter', 'Libre Baskerville', Georgia, Times, serif;
 	font-style: italic;
 	font-weight: bold;
 	color: #f2f2f2;
@@ -168,9 +168,9 @@ div#deskNav > nav > ul > li > a { /* box model */
 
 }
 div#deskNav > nav > ul > li > a { /* text styling */
-	font-family: 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'Bitter', 'Rockwell Light', Georgia, Times, serif;
 	color: #FFFFFF;
-	font-size: 24px;
+	font-size: 21px;
 	line-height: 36px;
 	text-shadow: -1px -1px #595959;
 	-webkit-text-shadow: -1px -1px #595959;
@@ -277,7 +277,7 @@ section#pitch-container {
 	padding: 125px 0;
 }
 section#pitch-container blockquote {
-	font: 30px/36px 'Libre Baskerville', Georgia, Times, serif;
+	font: 36px/48px 'Bitter', 'Libre Baskerville', Georgia, Times, serif;
 	font-style: italic;
 	color: #efefef;
 	margin: 0 100px;
@@ -301,11 +301,14 @@ section#pitch-container blockquote {
 }
 
 /* Highlights */
+
+
+
 section#highlights-container h3 {
-	font-family: 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'Bitter','Rockwell Light', Georgia, Times, serif;
 	font-style: normal;
 	font-weight: lighter;
-	font-size: 30px;
+	font-size: 28px /* 30px */;
 	color: #87D5FF;
 }
 section#highlights-container div.column {
@@ -316,7 +319,7 @@ ul.highlight-list {
 	position: relative;
 }
 ul.highlight-list li {
-	font-family: 'Libre Baskerville', Georgia, Times, serif;
+	font-family: 'Bitter', 'Libre Baskerville', Georgia, Times, serif;
 	font-size: 21px;
 	font-style: italic;
 	position: relative;
@@ -346,6 +349,9 @@ ul.highlight-list li:before {
 /* ---------- Gallery ---------- */
 section#gallery-container {
 	padding: 72px 0;
+}
+div#fancy-hide {
+	display: none;
 }
 ul.galleryList {
 	display: inline-block;
@@ -394,10 +400,16 @@ ul.galleryList li a img {
 }
 
 article.fancy-article {
-	background-color: #909090;
+	background: #909090 url(../images/fancy-bg.jpg) repeat top left scroll;
+	max-height: 600px;
+	padding: 10px 0;
+	overflow: hidden;
 }
 .fancy-gallery-header {
-
+	font-style: normal;
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 .fancy-gallery-desc {
 
@@ -412,16 +424,29 @@ article.fancy-article {
 
 }
 .fancy-gallery-highlights li h6 {
-
+	color: #87D5FF;
 }
 .fancy-gallery-image {
-
+	float: right !important;
 }
 .fancy-gallery-image img {
-
+	max-height: 100%;
+	max-width: 100%;
 }
 .fancy-gallery-filmstrip {
-
+	background: rgba(0,0,0,.5);
+	box-shadow: inset 5px 5px 0 0 rgba(0,0,0,.5);
+	-webkit-box-shadow: inset 5px 5px 0 0 rgba(0,0,0,.5);
+	margin-bottom: 0px;
+	transition: max-height 1s;
+	
+	position: relative;
+	overflow: hidden;
+	border: 1px solid;
+	border-color: #111111 #666666 #666666 #111111;
+}
+.fancy-gallery-filmstrip.collapsed {
+	max-height: 160px;
 }
 .fancy-gallery-image {
 
@@ -430,19 +455,36 @@ article.fancy-article {
 
 }
 .fancy-img {
-
+	margin: 10px 0;
+	
 }
 .fancy-img img {
-
+	margin: 0 auto;
+	box-shadow: 5px 5px 0 0 rgba(0,0,0,.5);
+	-webkit-box-shadow: 5px 5px 0 0 rgba(0,0,0,.5);
+	line-height: 0;
 }
 .fancy-gallery-filmstrip ul.thumbs {
-
+	margin-bottom: 0px;
+	display: inline-block;
+	
+}
+.gallery-plugin-container {
+	height: 100%;
+	overflow: hidden;
 }
 .fancy-gallery-filmstrip ul.thumbs li {
-
+	margin-bottom: 40px;
+	margin-top:30px;
+	position: relative;
 }
 .fancy-gallery-filmstrip ul.thumbs li a {
-
+	box-shadow: 5px 5px 0 0 rgba(0,0,0,.5);
+	-webkit-box-shadow: 5px 5px 0 0 rgba(0,0,0,.5);
+	display: block;
+	line-height: 0;
+	
+	bottom: 10px;
 }
 .fancy-gallery-filmstrip ul.thumbs li a:hover {
 
@@ -450,6 +492,28 @@ article.fancy-article {
 .fancy-gallery-filmstrip ul.thumbs li a.current {
 
 }
+.fancy-gallery-filmstrip ul.thumbs li a.current:after {
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	display: block;
+	bottom: -25px;
+	left: 50%;
+	margin-left: -15px;
+	border-color: transparent transparent #666 transparent;
+	border-width: 10px 15px;
+	border-style: solid;
+}
+.fancy-gallery-filmstrip ul.thumbs li a img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+div.fancybox-skin {
+	background-color: transparent;
+}
+
 
 /* ---------- Testing ---------- */
 

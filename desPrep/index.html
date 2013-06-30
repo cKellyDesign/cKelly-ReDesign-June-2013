@@ -5,6 +5,10 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
+
+
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
@@ -21,7 +25,10 @@
 	<link rel="stylesheet" href="stylesheets/base.css">
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/flexslider.css" type="text/css">
+	<link rel="stylesheet" href="gfx/fancy/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	<link rel="stylesheet" href="stylesheets/style.css">
+
 	<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -39,6 +46,8 @@
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src ="scripts/cKDjs.js"></script>
+	<script src="scripts/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="gfx/fancy/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 </head>
 <body>
@@ -121,7 +130,7 @@
 				<span class="row1">
 				<span class="lefty">
 					<li class="four columns">
-						<a href="#">
+						<a class="galThumb" rel="myWork" href="#Fitness">
 							<div class="thumbWrap">
 								<span>Project Title</span>
 								<img src="images/galThumbs/Fitness.jpg" />
@@ -199,46 +208,52 @@
 				<div id="fancy-hide">
 				
 					<article class="fancy-article container" id="Fitness">
+						<span class="area">
 						<h4 class="fancy-gallery-header eight columns">Fitness Template</h4>
-						<div class="four columns fancy-gallery-desc clear-left">
+						
+						<div class="eight columns fancy-gallery-image">
+							<img src="images/gal-FeatureImage.jpg" />
+						</div>
+						
+						<div class="four columns fancy-gallery-desc">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sapien convallis, posuere lorem sit amet, condimentum nunc. Aenean facilisis urna et quam iaculis, sed tempor dui interdum.</p>
 							<p>Phasellus gravida eros non turpis rutrum, eu eleifend nunc posuere. Donec non urna enim. Mauris posuere, leo ac varius eleifend, felis nulla eleifend purus, quis egestas massa dolor eu tortor.</p>
 						</div>
+						
 						<ul class="four columns fancy-gallery-highlights">
 							<li><h6>Skill Set Hightlights</h6></li>
 							<li><h6>Skill Set Hightlights</h6></li>
 							<li><h6>Skill Set Hightlights</h6></li>
 						</ul>
-						<div class="eight columns fancy-gallery-image">
-							<img src="images/placeholder.jpg" />
-						</div>
-						<div class="sixteen columns alpha omega fancy-gallery-filstrip">
+						</span> <!-- end toggleSlide area -->
+						
+						<div class="sixteen columns omega fancy-gallery-filmstrip collapsed">
 							<div class="gallery-plugin-container">
-								<div class="fancy-img sixteen columns">
-									<img src="images/placeholder.jpg">
-								</div>
 								<ul class="thumbs sixteen columns">
-									<li class=" two columns">
+									<li class=" three columns">
 										<a class="current" href="">
-											<img src="images/placeholder.jpg">
+											<img src="images/gal-thumbnail.jpg">
 										</a>
 									</li>
-									<li class="two columns">
+									<li class="three columns">
 										<a href="">
-											<img src="images/placeholder.jpg">
+											<img src="images/gal-thumbnail.jpg">
 										</a>
 									</li>
-									<li class="two columns">
+									<li class="three columns">
 										<a href="">
-											<img src="images/placeholder.jpg">
+											<img src="images/gal-thumbnail.jpg">
 										</a>
 									</li>
-									<li class="two columns ">
+									<li class="three columns ">
 										<a href="">
-											<img src="images/placeholder.jpg">
+											<img src="images/gal-thumbnail.jpg">
 										</a>
 									</li>
 								</ul>
+								<div class="fancy-img sixteen columns">
+									<img src="images/gal-DisplayImg.jpg">
+								</div>
 							</div>
 						</div>
 					</article>
