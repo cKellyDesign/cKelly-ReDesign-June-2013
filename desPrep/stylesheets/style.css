@@ -376,7 +376,7 @@ ul.galleryList li a span {
 	box-shadow: 1px 1px 0px #999999;
 	-webkit-box-shadow: 1px 1px 0px #999999;
 	-moz-box-shadow: 1px 1px 0px #999999;
-	line-height: 72px;
+	line-height: 30px;
 	text-align: center;
 	font-family: 'Rockwell Light', Georgia, Times, serif;
 	font-size: 24px;
@@ -454,6 +454,9 @@ article.fancy-article {
 .fancy-gallery-image img {
 
 }
+div.collapsed .fancy-img {
+	display: none;
+}
 .fancy-img {
 	margin: 10px 0;
 	
@@ -464,7 +467,7 @@ article.fancy-article {
 	-webkit-box-shadow: 5px 5px 0 0 rgba(0,0,0,.5);
 	line-height: 0;
 }
-.fancy-gallery-filmstrip ul.thumbs {
+.fancy-gallery-filmstrip ol.thumbs {
 	margin-bottom: 0px;
 	display: inline-block;
 	
@@ -473,12 +476,13 @@ article.fancy-article {
 	height: 100%;
 	overflow: hidden;
 }
-.fancy-gallery-filmstrip ul.thumbs li {
+.fancy-gallery-filmstrip ol.thumbs li {
 	margin-bottom: 40px;
 	margin-top:30px;
 	position: relative;
+	line-height: 0px;
 }
-.fancy-gallery-filmstrip ul.thumbs li a {
+.fancy-gallery-filmstrip ol.thumbs li a {
 	box-shadow: 5px 5px 0 0 rgba(0,0,0,.5);
 	-webkit-box-shadow: 5px 5px 0 0 rgba(0,0,0,.5);
 	display: block;
@@ -486,13 +490,13 @@ article.fancy-article {
 	
 	bottom: 10px;
 }
-.fancy-gallery-filmstrip ul.thumbs li a:hover {
+.fancy-gallery-filmstrip ol.thumbs li a:hover {
 
 }
-.fancy-gallery-filmstrip ul.thumbs li a.current {
+.fancy-gallery-filmstrip ol.thumbs li.current {
 
 }
-.fancy-gallery-filmstrip ul.thumbs li a.current:after {
+.fancy-gallery-filmstrip ol.thumbs li.current:after {
 	content: '';
 	height: 0;
 	width: 0;
@@ -505,13 +509,89 @@ article.fancy-article {
 	border-width: 10px 15px;
 	border-style: solid;
 }
-.fancy-gallery-filmstrip ul.thumbs li a img {
+.fancy-gallery-filmstrip ol.thumbs li img {
 	max-height: 100%;
 	max-width: 100%;
 }
 
 div.fancybox-skin {
 	background-color: transparent;
+}
+
+/* ---------- Contact Section ---------- */
+article#contact-form {
+	background: #909090 url(../images/fancy-bg.jpg) repeat top left scroll;
+}
+article#contact-form form {
+
+}
+article#contact-form h3 {
+	text-align: center;
+	margin: 21px 0 18px;	
+}
+article#contact-form input[type=text] {
+	background: rgba(0,0,0,.5);
+	box-shadow: inset 5px 5px 0 0 rgba(0,0,0,.5);
+	-webkit-box-shadow: inset 5px 5px 0 0 rgba(0,0,0,.5);
+	color: #efefef;
+	border: 1px solid;
+	border-color: #111111 #666666 #666666 #111111;
+	border-radius: 0px;
+	width: 94%;
+}
+article#contact-form textarea {
+	background: rgba(0,0,0,.5);
+	box-shadow: inset 5px 5px 0 0 rgba(0,0,0,.5);
+	-webkit-box-shadow: inset 5px 5px 0 0 rgba(0,0,0,.5);
+	color: #efefef;
+	border: 1px solid;
+	border-color: #111111 #666666 #666666 #111111;
+	border-radius: 0px;
+	width: 94%;
+	resize: vertical;
+}
+article#contact-form input[type=submit] {
+	font-family: 'Bitter', 'Rockwell Light', Georgia, Times, serif;
+	font-weight: lighter;
+	border-radius: 0px;
+	color: #FFFFFF;
+	font-size: 21px;
+	line-height: 36px;
+	text-shadow: -1px -1px #595959;
+	-webkit-text-shadow: -1px -1px #595959;
+}
+article#contact-form input[type=submit] {
+	margin: 3px;
+	display: block;
+	width: 95%;
+	padding-top: 5px;
+	border: 3px solid #477725;
+	
+	box-shadow: 0 0 2px 0px #000000 inset;
+	-webkit-box-shadow: 0 0 2px 0px #000000 inset;
+
+	background: #3d95c6; /* Old browsers */	
+	background-image: url(../images/navaBG.jpg);
+	background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* W3C */
+	background-image: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%,   rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* FF3.6+ */
+	background-image: url("../images/navaBG.jpg"), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,.33))); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top,  rgba(0,0,0,0 0%) 0%,rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,.33) 100%), url("../images/navaBG.jpg"); /* IE10+ */
+	background-image: url("../images/navaBG.jpg")\9;
+}
+article#contact-form input[type=submit]:hover,
+article#contact-form input[type=submit]:focus,
+article#contact-form input[type=submit]:active {
+	background: #3d95c6; /* Old browsers */	
+	background-image: url(../images/navaBG.jpg);
+	background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* W3C */
+	background-image: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%,   rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* FF3.6+ */
+	background-image: url("../images/navaBG.jpg"), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,.15))); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top,  rgba(0,0,0,0 0%) 0%,rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,.15) 100%), url("../images/navaBG.jpg"); /* IE10+ */
+	background-image: url("../images/navaBG.jpg")\9;
 }
 
 
