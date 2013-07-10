@@ -54,8 +54,17 @@
 
 </head>
 <body>
-	<div id="const">
-		<div id="starPar">
+	<div>
+		
+		<div id="star-paralax">
+			<img id="stars" src="images/GeminiStars2.svg">
+			<img id="const" src="images/Gemini.svg">
+		</div><!-- end star-paralax -->
+		
+		
+		
+		
+		
 			<section id="header-container" class="container">
 				<header>
 					<div id="mobNav" class="sixteen columns alpha omega">
@@ -129,10 +138,15 @@
 				
 			</section> <!-- end hightlights container -->
 			<section id="gallery-container" class="container">
+				<div id="galHeader">
+					<div class="one-third column alpha"><div></div></div>
+					<div class="one-third column title"><h2>My Work</h2></div>
+					<div class="one-third column omega"><div></div></div>
+				</div>
 				<ul class="galleryList">
 				<span class="row1">
 				<span class="lefty">
-					<li class="four columns">
+					<li class="four columns alpha">
 						<a class="galThumb"  href="#TemplateFramework">
 							<div class="thumbWrap">
 								<span>Responsive Template Framework</span>
@@ -144,7 +158,7 @@
 						<a class="galThumb"  href="#KCCI">
 							<div class="thumbWrap">
 								<span>Kenya Community Childcare Initiative</span>
-								<img src="images/galThumbs/Water1st-Feat.jpg" />
+								<img src="images/galThumbs/KCCI-Feat.jpg" />
 							</div>
 						</a>
 					</li>
@@ -162,7 +176,7 @@
 						<a class="galThumb"  href="#Water1stCampaign">
 							<div class="thumbWrap">
 								<span>Water 1st Campaign</span>
-								<img src="images/galThumbs/Water1st-Feat.jpg" />
+								<img src="images/galThumbs/W1Campaign-Feat.jpg" />
 							</div>
 						</a>
 					</li>
@@ -170,19 +184,19 @@
 				</span><!-- end row1 -->
 				<span class="row2">
 				<span class="lefty">
-					<li class="four columns">
-						<a class="galThumb"  href="#Water1stOrg">
+					<li class="four columns alpha">
+						<a class="galThumb"  href="#TasteFinder">
 							<div class="thumbWrap">
-								<span>Water1st.org</span>
-								<img src="images/galThumbs/Water1st-Feat.jpg" />
+								<span>Taste Finder</span>
+								<img src="images/galThumbs/TasteFinder-Feat.jpg" />
 							</div>
 						</a>
 					</li>
 					<li class="four columns">
-						<a class="galThumb"  href="#Water1stOrg">
+						<a class="galThumb"  href="#CPI">
 							<div class="thumbWrap">
-								<span>Water1st.org</span>
-								<img src="images/galThumbs/Water1st-Feat.jpg" />
+								<span>Community Partners International</span>
+								<img src="images/galThumbs/CPI-Feat.jpg" />
 							</div>
 						</a>
 					</li>
@@ -210,57 +224,7 @@
 				</ul>
 				<div id="fancy-hide">
 					
-					
-					<article class="fancy-article container" id="Water1stOrg">
-						<span class="area">
-						<h4 class="fancy-gallery-header eight columns">Water1st.org</h4>
-						
-						<div class="eight columns fancy-gallery-image">
-							<img src="images/galThumbs/Water1st-Feat.jpg" />
-						</div>
-						
-						<div class="four columns fancy-gallery-desc">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sapien convallis, posuere lorem sit amet, condimentum nunc. Aenean facilisis urna et quam iaculis, sed tempor dui interdum.</p>
-							<p>Phasellus gravida eros non turpis rutrum, eu eleifend nunc posuere. Donec non urna enim. Mauris posuere, leo ac varius eleifend, felis nulla eleifend purus, quis egestas massa dolor eu tortor.</p>
-						</div>
-						<ul class="four columns fancy-gallery-highlights">
-							<li><h6>Skill Set Hightlights</h6></li>
-							<li><h6>Skill Set Hightlights</h6></li>
-							<li><h6>Skill Set Hightlights</h6></li>
-						</ul>
-						</span> <!-- end toggleSlide area -->
-						
-						<div class="sixteen columns omega fancy-gallery-filmstrip collapsed">
-							<div class="gallery-plugin-container">
-								<ol class="thumbs sixteen columns flex-control-nav flex-control-paging">
-									<li class="three columns">
-										<a href="images/galThumbs/Water1st-1.jpg" target="_blank">
-											<img src="images/galThumbs/Water1st-Thumb1.jpg">
-										</a>
-									</li>
-									<li class="three columns">
-										<a href="images/galThumbs/Water1st-2.jpg" target="_blank">
-											<img src="images/galThumbs/Water1st-Thumb2.jpg">
-										</a>
-									</li>
-									<li class="three columns">
-										<a href="images/galThumbs/Water1st-3.jpg" target="_blank">
-											<img src="images/galThumbs/Water1st-Thumb3.jpg">	
-										</a>								
-									</li>
-								</ol>
-								<div class="fancy-img sixteen columns">
-									<!-- <img src="images/gal-DisplayImg.jpg"> -->
-									<ul class="slides">
-									<li><a href="images/galThumbs/Water1st-1.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal1.jpg"></a></li>
-									<li><a href="images/galThumbs/Water1st-2.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal2.jpg"></a></li>
-									<li><a href="images/galThumbs/Water1st-3.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal3.jpg"></a></li>
-								</ul>
-								</div>
-							</div>
-						</div>
-					</article> <!-- End Water1st -->
-					
+					<!-- ********** 1. Template Framework ********** -->
 					<article class="fancy-article container" id="TemplateFramework">
 						<span class="area">
 						<h4 class="fancy-gallery-header eight columns">Responsive Template Framework</h4>
@@ -316,7 +280,114 @@
 						</div>
 					</article> <!-- End TemplateFramework -->
 					
+					<!-- ********** 2. KCCI ********** -->
+					<article class="fancy-article container" id="KCCI">
+						<span class="area">
+						<h4 class="fancy-gallery-header eight columns">Kenya Community Childcare Initiative</h4>
+						
+						<div class="eight columns fancy-gallery-image">
+							<img src="images/galThumbs/KCCI-Feat.jpg" />
+						</div>
+						
+						<div class="four columns fancy-gallery-desc">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sapien convallis, posuere lorem sit amet, condimentum nunc. Aenean facilisis urna et quam iaculis, sed tempor dui interdum.</p>
+							<p>Phasellus gravida eros non turpis rutrum, eu eleifend nunc posuere. Donec non urna enim. Mauris posuere, leo ac varius eleifend, felis nulla eleifend purus, quis egestas massa dolor eu tortor.</p>
+						</div>
+						<ul class="four columns fancy-gallery-highlights">
+							<li><h6>Skill Set Hightlights</h6></li>
+							<li><h6>Skill Set Hightlights</h6></li>
+							<li><h6>Skill Set Hightlights</h6></li>
+						</ul>
+						</span> <!-- end toggleSlide area -->
+						
+						<div class="sixteen columns omega fancy-gallery-filmstrip collapsed">
+							<div class="gallery-plugin-container">
+								<ol class="thumbs sixteen columns flex-control-nav flex-control-paging">
+									<li class="three columns">
+										<a href="images/galThumbs/KCCI-1.jpg" target="_blank">
+											<img src="images/galThumbs/KCCI-Thumb1.jpg">
+										</a>
+									</li>
+									<li class="three columns">
+										<a href="images/galThumbs/KCCI-2.jpg" target="_blank">
+											<img src="images/galThumbs/KCCI-Thumb2.jpg">
+										</a>
+									</li>
+									<li class="three columns">
+										<a href="images/galThumbs/Water1st-3.jpg" target="_blank">
+											<img src="images/galThumbs/KCCI-Thumb3.jpg">	
+										</a>								
+									</li>
+									<li class="three columns">
+										<a href="images/galThumbs/Water1st-4.jpg" target="_blank">
+											<img src="images/galThumbs/KCCI-Thumb4.jpg">	
+										</a>								
+									</li>
+								</ol>
+								<div class="fancy-img sixteen columns">
+									<!-- <img src="images/gal-DisplayImg.jpg"> -->
+									<ul class="slides">
+									<li><a href="images/galThumbs/Water1st-1.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal1.jpg"></a></li>
+									<li><a href="images/galThumbs/Water1st-2.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal2.jpg"></a></li>
+									<li><a href="images/galThumbs/Water1st-3.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal3.jpg"></a></li>
+								</ul>
+								</div>
+							</div>
+						</div>
+					</article> <!-- End KCCI -->
 					
+					<!-- ********** 3. Water1st.org ********** -->
+					<article class="fancy-article container" id="Water1stOrg">
+						<span class="area">
+						<h4 class="fancy-gallery-header eight columns">Water1st.org</h4>
+						
+						<div class="eight columns fancy-gallery-image">
+							<img src="images/galThumbs/Water1st-Feat.jpg" />
+						</div>
+						
+						<div class="four columns fancy-gallery-desc">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sapien convallis, posuere lorem sit amet, condimentum nunc. Aenean facilisis urna et quam iaculis, sed tempor dui interdum.</p>
+							<p>Phasellus gravida eros non turpis rutrum, eu eleifend nunc posuere. Donec non urna enim. Mauris posuere, leo ac varius eleifend, felis nulla eleifend purus, quis egestas massa dolor eu tortor.</p>
+						</div>
+						<ul class="four columns fancy-gallery-highlights">
+							<li><h6>Skill Set Hightlights</h6></li>
+							<li><h6>Skill Set Hightlights</h6></li>
+							<li><h6>Skill Set Hightlights</h6></li>
+						</ul>
+						</span> <!-- end toggleSlide area -->
+						
+						<div class="sixteen columns omega fancy-gallery-filmstrip collapsed">
+							<div class="gallery-plugin-container">
+								<ol class="thumbs sixteen columns flex-control-nav flex-control-paging">
+									<li class="three columns">
+										<a href="images/galThumbs/Water1st-1.jpg" target="_blank">
+											<img src="images/galThumbs/Water1st-Thumb1.jpg">
+										</a>
+									</li>
+									<li class="three columns">
+										<a href="images/galThumbs/Water1st-2.jpg" target="_blank">
+											<img src="images/galThumbs/Water1st-Thumb2.jpg">
+										</a>
+									</li>
+									<li class="three columns">
+										<a href="images/galThumbs/Water1st-3.jpg" target="_blank">
+											<img src="images/galThumbs/Water1st-Thumb3.jpg">	
+										</a>								
+									</li>
+								</ol>
+								<div class="fancy-img sixteen columns">
+									<!-- <img src="images/gal-DisplayImg.jpg"> -->
+									<ul class="slides">
+									<li><a href="images/galThumbs/Water1st-1.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal1.jpg"></a></li>
+									<li><a href="images/galThumbs/Water1st-2.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal2.jpg"></a></li>
+									<li><a href="images/galThumbs/Water1st-3.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal3.jpg"></a></li>
+								</ul>
+								</div>
+							</div>
+						</div>
+					</article> <!-- End Water1st.org -->
+					
+					<!-- ********** 4. W1 Campaign ********** -->
 					<article class="fancy-article container" id="Water1stCampaign">
 						<span class="area">
 						<h4 class="fancy-gallery-header eight columns">Water1st Campaign</h4>
@@ -341,39 +412,51 @@
 								<ol class="thumbs sixteen columns flex-control-nav flex-control-paging">
 									<li class="three columns">
 										<a href="images/galThumbs/Water1st-1.jpg" target="_blank">
-											<img src="images/galThumbs/Water1st-Thumb1.jpg">
+											<img src="images/galThumbs/W1Campaign-Thumb1.jpg">
 										</a>
 									</li>
 									<li class="three columns">
-										<a href="images/galThumbs/Water1st-2.jpg" target="_blank">
-											<img src="images/galThumbs/Water1st-Thumb2.jpg">
+										<a href="images/galThumbs/W1Campaign-2.jpg" target="_blank">
+											<img src="images/galThumbs/W1Campaign-Thumb2.jpg">
 										</a>
 									</li>
 									<li class="three columns">
-										<a href="images/galThumbs/Water1st-3.jpg" target="_blank">
-											<img src="images/galThumbs/Water1st-Thumb3.jpg">	
+										<a href="images/galThumbs/W1Campaign-3.jpg" target="_blank">
+											<img src="images/galThumbs/W1Campaign-Thumb3.jpg">	
+										</a>								
+									</li>
+									<li class="three columns">
+										<a href="images/galThumbs/W1Campaign-4.jpg" target="_blank">
+											<img src="images/galThumbs/W1Campaign-Thumb4.jpg">	
+										</a>								
+									</li>
+									<li class="three columns">
+										<a href="images/galThumbs/W1Campaign-5.jpg" target="_blank">
+											<img src="images/galThumbs/W1Campaign-Thumb5.jpg">	
 										</a>								
 									</li>
 								</ol>
 								<div class="fancy-img sixteen columns">
 									<!-- <img src="images/gal-DisplayImg.jpg"> -->
 									<ul class="slides">
-									<li><a href="images/galThumbs/Water1st-1.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal1.jpg"></a></li>
-									<li><a href="images/galThumbs/Water1st-2.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal2.jpg"></a></li>
-									<li><a href="images/galThumbs/Water1st-3.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal3.jpg"></a></li>
+									<li><a href="images/galThumbs/W1Campaign-1.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal1.jpg"></a></li>
+									<li><a href="images/galThumbs/W1Campaign-2.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal2.jpg"></a></li>
+									<li><a href="images/galThumbs/W1Campaign-3.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal3.jpg"></a></li>
+									<li><a href="images/galThumbs/W1Campaign-4.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal4.jpg"></a></li>
+									<li><a href="images/galThumbs/W1Campaign-5.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal5.jpg"></a></li>
 								</ul>
 								</div>
 							</div>
 						</div>
 					</article> <!-- End Water1stCampaign -->
 					
-					
-					<article class="fancy-article container" id="KCCI">
+					<!-- ********** 5. Taste Finder ********** -->
+					<article class="fancy-article container" id="TasteFinder">
 						<span class="area">
-						<h4 class="fancy-gallery-header eight columns">Kenya Community Childcare Initiative</h4>
+						<h4 class="fancy-gallery-header eight columns">Taste Finder</h4>
 						
 						<div class="eight columns fancy-gallery-image">
-							<img src="images/galThumbs/Water1st-Feat.jpg" />
+							<img src="images/galThumbs/TasteFinder-Feat.jpg" />
 						</div>
 						
 						<div class="four columns fancy-gallery-desc">
@@ -391,32 +474,99 @@
 							<div class="gallery-plugin-container">
 								<ol class="thumbs sixteen columns flex-control-nav flex-control-paging">
 									<li class="three columns">
-										<a href="images/galThumbs/Water1st-1.jpg" target="_blank">
-											<img src="images/galThumbs/Water1st-Thumb1.jpg">
+										<a href="images/galThumbs/TasteFinder-1.jpg" target="_blank">
+											<img src="images/galThumbs/TasteFinder-Thumb1.jpg">
 										</a>
 									</li>
 									<li class="three columns">
-										<a href="images/galThumbs/Water1st-2.jpg" target="_blank">
-											<img src="images/galThumbs/Water1st-Thumb2.jpg">
+										<a href="images/galThumbs/TasteFinder-2.jpg" target="_blank">
+											<img src="images/galThumbs/TasteFinder-Thumb2.jpg">
 										</a>
 									</li>
 									<li class="three columns">
-										<a href="images/galThumbs/Water1st-3.jpg" target="_blank">
-											<img src="images/galThumbs/Water1st-Thumb3.jpg">	
+										<a href="images/galThumbs/TasteFinder-3.jpg" target="_blank">
+											<img src="images/galThumbs/TasteFinder-Thumb3.jpg">	
+										</a>								
+									</li>
+									<li class="three columns">
+										<a href="images/galThumbs/TasteFinder-4.jpg" target="_blank">
+											<img src="images/galThumbs/TasteFinder-Thumb4.jpg">	
 										</a>								
 									</li>
 								</ol>
 								<div class="fancy-img sixteen columns">
 									<!-- <img src="images/gal-DisplayImg.jpg"> -->
 									<ul class="slides">
-									<li><a href="images/galThumbs/Water1st-1.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal1.jpg"></a></li>
-									<li><a href="images/galThumbs/Water1st-2.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal2.jpg"></a></li>
-									<li><a href="images/galThumbs/Water1st-3.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal3.jpg"></a></li>
+									<li><a href="images/galThumbs/TasteFinder-1.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal1.jpg"></a></li>
+									<li><a href="images/galThumbs/TasteFinder-2.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal2.jpg"></a></li>
+									<li><a href="images/galThumbs/TasteFinder-3.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal3.jpg"></a></li>
+									<li><a href="images/galThumbs/TasteFinder-4.jpg" target="_blank"><img src="images/galThumbs/Water1st-Gal4.jpg"></a></li>
 								</ul>
 								</div>
 							</div>
 						</div>
-					</article> <!-- End KCCI -->
+					</article> <!-- End Taste Finder -->
+					
+					<!-- ********** 6. CPI ********** -->
+					<article class="fancy-article container" id="CPI">
+						<span class="area">
+						<h4 class="fancy-gallery-header eight columns">Community Partners International</h4>
+						
+						<div class="eight columns fancy-gallery-image">
+							<img src="images/galThumbs/CPI-Feat.jpg" />
+						</div>
+						
+						<div class="four columns fancy-gallery-desc">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in sapien convallis, posuere lorem sit amet, condimentum nunc. Aenean facilisis urna et quam iaculis, sed tempor dui interdum.</p>
+							<p>Phasellus gravida eros non turpis rutrum, eu eleifend nunc posuere. Donec non urna enim. Mauris posuere, leo ac varius eleifend, felis nulla eleifend purus, quis egestas massa dolor eu tortor.</p>
+						</div>
+						<ul class="four columns fancy-gallery-highlights">
+							<li><h6>Skill Set Hightlights</h6></li>
+							<li><h6>Skill Set Hightlights</h6></li>
+							<li><h6>Skill Set Hightlights</h6></li>
+						</ul>
+						</span> <!-- end toggleSlide area -->
+						
+						<div class="sixteen columns omega fancy-gallery-filmstrip collapsed">
+							<div class="gallery-plugin-container">
+								
+								<div class="fancy-img sixteen columns">
+									<!-- <img src="images/gal-DisplayImg.jpg"> -->
+									<ul class="slides">
+									<li data-thumb="images/galThumbs/CPI-Thumb1.jpg"><a href="images/galThumbs/CPI-1.jpg" target="_blank"><img src="images/galThumbs/CPI-Gal1.jpg"></a></li>
+									<li data-thumb="images/galThumbs/CPI-Thumb2.jpg"><a href="images/galThumbs/CPI-2.jpg" target="_blank"><img src="images/galThumbs/CPI-Gal2.jpg"></a></li>
+									<li data-thumb="images/galThumbs/CPI-Thumb3.jpg"><a href="images/galThumbs/CPI-3.jpg" target="_blank"><img src="images/galThumbs/CPI-Gal3.jpg"></a></li>
+									<li data-thumb="images/galThumbs/CPI-Thumb4.jpg"><a href="images/galThumbs/CPI-4.jpg" target="_blank"><img src="images/galThumbs/CPI-Gal4.jpg"></a></li>
+									<li data-thumb="images/galThumbs/CPI-Thumb5.jpg"><a href="images/galThumbs/CPI-5.jpg" target="_blank"><img src="images/galThumbs/CPI-Gal5.jpg"></a></li>
+								</ul>
+								<!--
+								<ol class="thumbs sixteen columns flex-control-nav flex-control-paging">
+									<li class="three columns">
+											<img src="images/galThumbs/CPI-Thumb1.jpg">
+									</li>
+									<li class="three columns">
+											<img src="images/galThumbs/CPI-Thumb2.jpg">
+									</li>
+									<li class="three columns">
+											<img src="images/galThumbs/CPI-Thumb3.jpg">							
+									</li>
+									<li class="three columns">
+											<img src="images/galThumbs/CPI-Thumb4.jpg">								
+									</li>
+									<li class="three columns">
+											<img src="images/galThumbs/CPI-Thumb5.jpg">							
+									</li>
+								</ol>
+								
+								
+								$('article#CPI span.area').slideToggle();
+								$('article#CPI .fancy-gallery-filmstrip').toggleClass('collapsed');
+
+								-->
+								</div>
+							</div>
+						</div>
+					</article> <!-- End CPI -->
 					
 				</div>
 			</section> <!-- end gallery container -->
@@ -443,7 +593,7 @@
 			</section> <!-- end contact container -->
 			<div class="page-spacer bottom"></div>
 		
-		</div> <!-- end star paralax -->
+		
 	</div> <!-- end contellation div -->
 
 </body>
