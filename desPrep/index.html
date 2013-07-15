@@ -77,12 +77,13 @@
 							</ul>
 						</nav>
 					</div> <!-- end mobile navigation -->
-					<div class="sixteen columns" id="logo-container">
+					<div class="sixteen columns alpha" id="logo-container">
 						<a href="">
 							<div id="logo-body" class="landed">
 								
 							</div> <!-- end logo container -->
 						</a>
+					<img src="images/Hawking_Quote.png" class="quote six columns">
 					</div>
 					<div id="deskNav" class="sixteen columns alpha omega">
 						<nav>
@@ -92,9 +93,9 @@
 										<span>cKelly Design</span>
 									</a>
 								</li> 
-								<li class="one-third column alpha"><a href="#pitch-container">About Me</a></li>
-								<li class="one-third column"><a href="#work-container">What I've Done</a></li>
-								<li class="one-third column omega"><a href="#contact-container">Contact Me</a></li>
+								<li class="one-third column alpha"><a href="#pitch-container">About</a></li>
+								<li class="one-third column"><a href="#work-container">Projects</a></li>
+								<li class="one-third column omega"><a href="#contact-container">Contact</a></li>
 							</ul>
 						</nav>
 					</div> <!-- end dektop navigation -->
@@ -102,11 +103,16 @@
 			
 			</section> <!-- end header-container -->
 			<section class="container" id="pitch-container">
+				<div id="galHeader">
+					<div class="one-third column alpha"><div></div></div>
+					<div class="one-third column title"><h2>ABOUT</h2></div>
+					<div class="one-third column omega"><div></div></div>
+				</div>
 				<blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum tristique facilisis. Suspendisse at tempor felis. Fusce id dolor ac dui ultricies hendrerit et at diam. </blockquote>
 			</section> <!-- end pitch-container -->
 			<section class="container" id="highlights-container">
 				<div id="highlights">
-					<div class="one-third column alpha">
+					<!-- <div class="one-third column alpha">
 						<h3>Impactful Designer</h3>
 						<p>With a background in design, I bring clean and powerful design to the table. From print to web, I provide a consistent and wholistic design approach.</p>
 						<ul class="highlight-list">
@@ -125,12 +131,40 @@
 						</ul>
 					</div>
 					<div class="one-third column omega">
-						<h3>Problem Solver</h3>
+						<h3>Identity Campaigner</h3>
 						<p>No matter the scope of the issue, it becomes a puzzle waiting to be solved. From designing to development, from group dynamics to project management, I am a fixer.</p>
 						<ul class="highlight-list">
 							<li>3rd Party Vendors</li>
 							<li>Platform Restrictions</li>
 							<li>All Things Design</li>
+						</ul>
+					</div> -->
+					
+					<div id="ImpDes" class="one-third column alpha">
+						<h3>Powerful Designer</h3>
+						<p>With a background in design, I bring clean and powerful design to the table. From print to web, I provide a consistent and wholistic design approach.</p>
+						<ul class="highlight-list">
+							<li>Typography</li>
+							<li>Iconography</li>
+							<li>Clean & Striking Style</li>
+						</ul>
+					</div>
+					<div id="InnDev" class="one-third column">
+						<h3>Innovative Developer</h3>
+						<p>Self taught, I have a high aptitude for front end coding and MVC frameworks. I develop responsively and compatibly to ensure maximum accessibility.</p>
+						<ul class="highlight-list">
+							<li>Responsive Frameworks</li>
+							<li>Iterative Workflows</li>
+							<li>Code Debugging</li>
+						</ul>
+					</div>
+					<div id="IdCamp" class="one-third column omega">
+						<h3>Passionate Marketer</h3>
+						<p>No matter the scope of the issue, it becomes a puzzle waiting to be solved. From designing to development, from group dynamics to project management, I am a fixer.</p>
+						<ul class="highlight-list">
+							<li>Brand Research & Development</li>
+							<li>Web & Print Collateral</li>
+							<li>User Experience Optimization </li>
 						</ul>
 					</div>
 				</div> <!-- end div.highlights -->
@@ -140,7 +174,7 @@
 			<section id="gallery-container" class="container">
 				<div id="galHeader">
 					<div class="one-third column alpha"><div></div></div>
-					<div class="one-third column title"><h2>My Work</h2></div>
+					<div class="one-third column title"><h2>PROJECTS</h2></div>
 					<div class="one-third column omega"><div></div></div>
 				</div>
 				<ul class="galleryList">
@@ -571,15 +605,17 @@
 				</div>
 			</section> <!-- end gallery container -->
 			<section id="contact-container" class="container">
-				<div class="sixteen columns">
-					<a class="contact-button" href="#contact-form">
-						<span><h3>Contact Me</h3></span>
-					</a>
+				<div id="galHeader">
+					<div class="one-third column alpha"><div></div></div>
+					<div class="one-third column title"><h2>CONTACT</h2></div>
+					<div class="one-third column omega"><div></div></div>
 				</div>
 				<div class="">
+				<div class="eight columns alpha contactpar">
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum tristique facilisis. Suspendisse at tempor felis. Fusce id dolor ac dui ultricies hendrerit et at diam. </p>
+						</div>
 					<article id="contact-form" class="eight columns alpha omega">
-						<form class="eight columns">
-								<h3>Contact Me!</h3>
+						<form class="eight columns omega">
 								<input type="text" name="name" value="Name">
 								<input type="text" name="email" value="Email">
 								<input type="text" name="subject" value="Subject">

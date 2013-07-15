@@ -15,14 +15,26 @@ body {
 		 url('../gfx/RockwellStd-LightItalic.ttf') format('truetype');
 	font-weight: lighter;
 }
-@import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=futurabd:400,700,400italic);
+@font-face {
+	src: url('../gfx/BoogieNightsShadowNF.ttf');
+	font-family: 'boogie';
+}
+@font-face {
+	src: url('../gfx/FuturaStd-Book.otf');
+	font-family: 'futuralt';
+}
+@font-face {
+	src: url('../gfx/FuturaStd-Book.otf');
+	font-family: 'futurabd';
+}
 
 h1, h2 {
-	font-family: 'Bitter', 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'futurabd', 'Rockwell Light', Georgia, Times, serif;
 	color: #d9d9d9;
 }
 h3, h4, h5, h6 {
-	font-family: 'Bitter', 'Libre Baskerville', Georgia, Times, serif;
+	font-family: 'futurabd', 'Libre Baskerville', Georgia, Times, serif;
 	font-style: italic;
 	font-weight: bold;
 	color: #f2f2f2;
@@ -127,13 +139,21 @@ div#star-paralax img#const {
 /* ---------- Landing/Logo ---------- */
 
 div#logo-body {
-	height: 500px;
-	background-image: url(../images/logo.png);
+	height: 460px;
+	width: 705px;
+	background-image: url(../images/ckelly_logo.png);
 	background-color: transparent;
-	background-position: center center;
+	background-position: left center;
 	background-repeat: no-repeat;
 	transition: .5s;
+	margin-left: -12px;
 }
+div#logo-container img {
+	position: absolute;
+	bottom: 250px;
+	right: 60px;
+}
+
 div#logo-body.landed {
 	height: 500px;
 }
@@ -170,7 +190,7 @@ div#deskNav ul li {
 }
 div#deskNav > nav > ul > li {
 	text-align: center;
-	background-color: #477725;
+	background-color: #808080;
 	box-shadow: 3px 3px 0px 0px #000000;
 	-webkit-box-shadow: 3px 3px 0px 0px #000000;
 	
@@ -208,7 +228,7 @@ div#deskNav > nav > ul > li > a { /* box model */
 
 }
 div#deskNav > nav > ul > li > a { /* text styling */
-	font-family: 'Bitter', 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'futurabd', 'Rockwell Light', Georgia, Times, serif;
 	color: #FFFFFF;
 	font-size: 21px;
 	line-height: 36px;
@@ -304,6 +324,7 @@ div#deskNav.stickToTop li.logo {
 	left: 15px;
 }
 div#deskNav.stickToTop li.logo > a#stt-logo {
+	opacity: .7;
 
 }
 div#deskNav.stickToTop li.logo > a#stt-logo > span {
@@ -317,7 +338,7 @@ section#pitch-container {
 	padding: 125px 0;
 }
 section#pitch-container blockquote {
-	font: 36px/48px 'Bitter', 'Libre Baskerville', Georgia, Times, serif;
+	font: 36px/48px 'futurabd', 'Libre Baskerville', Georgia, Times, serif;
 	font-style: italic;
 	color: #efefef;
 	margin: 0 100px;
@@ -345,7 +366,7 @@ section#pitch-container blockquote {
 
 
 section#highlights-container h3 {
-	font-family: 'Bitter','Rockwell Light', Georgia, Times, serif;
+	font-family: 'futuralt','Rockwell Light', Georgia, Times, serif;
 	font-style: normal;
 	font-weight: lighter;
 	font-size: 28px /* 30px */;
@@ -359,24 +380,25 @@ ul.highlight-list {
 	position: relative;
 }
 ul.highlight-list li {
-	font-family: 'Bitter', 'Libre Baskerville', Georgia, Times, serif;
-	font-size: 21px;
-	font-style: italic;
+	font-family: 'futurabd', 'Libre Baskerville', Georgia, Times, serif;
+	font-size: 16px;
+	margin-bottom: 16px;
 	position: relative;
-}
+	margin-left: 10px;
+}/*
 ul.highlight-list:before {
 	content: '';
 	height: 105px;
-	border-left: 1px solid #fff;
+	border-left: 1px solid #87D5FF;
 	position: absolute;
 	top: -10px;
 	left: 0;
-}
+}*/
 ul.highlight-list li:before {
 	content: '';
 	height: 0px;
 	width: 0px;
-	border-color: transparent transparent transparent #ffffff;
+	border-color: transparent transparent transparent #87D5FF;
 	border-style: solid;
 	border-width: 6px 0 6px 12px;
 	position: absolute;
@@ -384,6 +406,30 @@ ul.highlight-list li:before {
 	top: 4px;
 	position: absolute;
 	display: block;
+}
+
+div#InnDev {
+	border-left: 1px solid #87D5FF;
+	border-right: 1px solid #87D5FF;
+	margin: 0;
+	padding: 0 20px;
+	width: 292px;
+	height: 229px;
+
+}
+
+div#ImpDes {
+	margin: 0 10px 0 0;
+	padding: 0 10px 0 0;
+	width: 292px;
+
+}
+
+div#IdCamp {
+	margin: 0 0 0 10px;
+	padding: 0 0 0 10px;
+	width: 292px;
+
 }
 
 /* ---------- Gallery ---------- */
@@ -400,14 +446,20 @@ div#galHeader div.one-third.column {
 }
 div#galHeader div.one-third.column div {
 	margin: 4px;
-	background: transparent url(../images/galThumbHoverBG.jpg) repeat top left scroll;
+	background: transparent url(../images/metaltexture.jpg) repeat top left scroll;
 	height: 28px;
 }
 div#galHeader div.one-third.column.title {
 	background-color: transparent;
+	
+	
 }
 div#galHeader div.one-third.column.title h2 {
 	text-align: center;
+	font-family: 'boogie';
+	color: #87D5FF;
+	font-size: 64px;
+	line-height: 49px;
 }
 div#galHeader div.one-third.column.alpha {
 	
@@ -663,11 +715,17 @@ ul.flex-direction-nav {
 }
 
 /* ---------- Contact Section ---------- */
+
+div.contactpar p {
+	font-family: "futuralt";
+	font-size: 30px;
+	line-height: 36px;
+}
 article#contact-form {
 	background: #909090 url(../images/fancy-bg.jpg) repeat top left scroll;
 }
 article#contact-form form {
-
+	padding-top: 20px;
 }
 article#contact-form h3 {
 	text-align: center;
@@ -695,7 +753,7 @@ article#contact-form textarea {
 	resize: vertical;
 }
 article#contact-form input[type=submit] {
-	font-family: 'Bitter', 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'futurabd', 'Rockwell Light', Georgia, Times, serif;
 	font-weight: lighter;
 	border-radius: 0px;
 	color: #FFFFFF;
@@ -709,7 +767,7 @@ article#contact-form input[type=submit] {
 	display: block;
 	width: 95%;
 	padding-top: 5px;
-	border: 3px solid #477725;
+	border: 3px solid #808080;
 	
 	box-shadow: 0 0 2px 0px #000000 inset;
 	-webkit-box-shadow: 0 0 2px 0px #000000 inset;
