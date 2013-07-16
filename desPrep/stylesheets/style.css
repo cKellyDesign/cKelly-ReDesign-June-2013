@@ -6,6 +6,8 @@ body {
 }
 
 /* ---------- Typography ---------- */
+
+/*
 @import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic");
 @font-face {
 	font-family: 'Rockwell Light';
@@ -15,26 +17,30 @@ body {
 		 url('../gfx/RockwellStd-LightItalic.ttf') format('truetype');
 	font-weight: lighter;
 }
-@import url(http://fonts.googleapis.com/css?family=futurabd:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=futurabd:400,700,400italic); */
 @font-face {
 	src: url('../gfx/BoogieNightsShadowNF.ttf');
 	font-family: 'boogie';
 }
 @font-face {
-	src: url('../gfx/FuturaStd-Book.otf');
-	font-family: 'futuralt';
+	src: url('../gfx/FuturaStd-Bold.otf');
+	font-family: 'futurabd';
 }
 @font-face {
 	src: url('../gfx/FuturaStd-Book.otf');
-	font-family: 'futurabd';
+	font-family: 'futurabk';
+}
+@font-face {
+	src: url('../gfx/FuturaStd-Light.otf');
+	font-family: 'futuralt';
 }
 
 h1, h2 {
-	font-family: 'futurabd', 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'futurabd', Trebuchet, sans-serif;
 	color: #d9d9d9;
 }
 h3, h4, h5, h6 {
-	font-family: 'futurabd', 'Libre Baskerville', Georgia, Times, serif;
+	font-family: 'futurabd', Trebuchet, sans-serif;
 	font-style: italic;
 	font-weight: bold;
 	color: #f2f2f2;
@@ -228,7 +234,7 @@ div#deskNav > nav > ul > li > a { /* box model */
 
 }
 div#deskNav > nav > ul > li > a { /* text styling */
-	font-family: 'futurabd', 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'futurabk', 'Rockwell Light', Georgia, Times, serif;
 	color: #FFFFFF;
 	font-size: 21px;
 	line-height: 36px;
@@ -335,15 +341,16 @@ div#deskNav.stickToTop li.logo > a#stt-logo > span {
 /* --------- Content Area ---------- */
 
 section#pitch-container {
-	padding: 125px 0;
+	padding: 125px 0 72px;
 }
 section#pitch-container blockquote {
-	font: 36px/48px 'futurabd', 'Libre Baskerville', Georgia, Times, serif;
+	font: 32px/44px 'futurabk', Trebuchet, sans-serif;
 	font-style: italic;
 	color: #efefef;
-	margin: 0 100px;
+	margin: 0 85px;
     padding: 0;
     border-left: none;
+    text-align: center; 
 }
 @media only screen and (max-width: 959px) {
 	section#pitch-container blockquote {
@@ -366,21 +373,30 @@ section#pitch-container blockquote {
 
 
 section#highlights-container h3 {
-	font-family: 'futuralt','Rockwell Light', Georgia, Times, serif;
+	font-family: 'futurabk', Trebuchet, sans-serif;
 	font-style: normal;
 	font-weight: lighter;
 	font-size: 28px /* 30px */;
 	color: #87D5FF;
 }
+.blue {
+	color: #87D5FF;
+}
+
+section#highlights-container p {
+	font-size: 13px;
+}
+
 section#highlights-container div.column {
 	position: relative;
 }
 ul.highlight-list {
 	padding-left: 18px;
 	position: relative;
+	margin-bottom: 0;
 }
 ul.highlight-list li {
-	font-family: 'futurabd', 'Libre Baskerville', Georgia, Times, serif;
+	font-family: 'futurabk', Trebuchet, sans-serif;
 	font-size: 16px;
 	margin-bottom: 16px;
 	position: relative;
@@ -414,7 +430,7 @@ div#InnDev {
 	margin: 0;
 	padding: 0 20px;
 	width: 292px;
-	height: 229px;
+	height: 250px;
 
 }
 
@@ -456,7 +472,7 @@ div#galHeader div.one-third.column.title {
 }
 div#galHeader div.one-third.column.title h2 {
 	text-align: center;
-	font-family: 'boogie';
+	font-family: 'boogie', Trebuchet, sans-serif;
 	color: #87D5FF;
 	font-size: 64px;
 	line-height: 49px;
@@ -515,7 +531,7 @@ ul.galleryList li a span {
 	-moz-box-shadow: 1px 1px 0px #999999;
 	line-height: 30px;
 	text-align: center;
-	font-family: 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'futuralt', Trebuchet, sans-serif;
 	font-size: 24px;
 	color: #87D5FF;
 	text-shadow: -1px -1px 0px #000000;
@@ -717,9 +733,13 @@ ul.flex-direction-nav {
 /* ---------- Contact Section ---------- */
 
 div.contactpar p {
-	font-family: "futuralt";
+	font-family: "futuralt", Trebuchet, sans-serif;;
 	font-size: 30px;
 	line-height: 36px;
+	margin-bottom: 30px;
+}
+div.contactpar p.blue {
+	text-align:center;
 }
 article#contact-form {
 	background: #909090 url(../images/fancy-bg.jpg) repeat top left scroll;
@@ -753,7 +773,7 @@ article#contact-form textarea {
 	resize: vertical;
 }
 article#contact-form input[type=submit] {
-	font-family: 'futurabd', 'Rockwell Light', Georgia, Times, serif;
+	font-family: 'futurabk', Trebuchet, sans-serif;
 	font-weight: lighter;
 	border-radius: 0px;
 	color: #FFFFFF;
