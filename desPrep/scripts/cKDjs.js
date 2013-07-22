@@ -1,5 +1,22 @@
 var i = 0;
+
+// ***** Pop It Up *****	
+function popitup(url) {
+	newwindow=window.open(url,'name','height=520,width=380,scrollbars=1');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+function popitup2(url) {
+	newwindow=window.open(url,'name','height=800,width=1050,scrollbars=1');
+	if (window.focus) {newwindow.focus()}
+	return false;
+} 
+
+
 $(document).ready(function(){
+
+	// ***** Nav Scripts *****
+	// doc ready add or remove class stickToTop
 	var topDist = $(document).scrollTop();
 	if ( topDist >= 536 ) {
 		$('div#deskNav').addClass("stickToTop");
@@ -7,46 +24,114 @@ $(document).ready(function(){
 		$('div#deskNav').removeClass("stickToTop");
 	}
 	
-	
-	
-	
-	
+	// nav scrollTo functions
+	$('a#stt-logo').bind({click: function(){
+		//scroll to top of page
+		$('html, body').animate({
+			scrollTop: 0
+		}, 250);
+		return false;
+	}});
+	$('div#deskNav li a.about').bind({click: function(){
+		var topDist = $(document).scrollTop();
+		var dist = $('#pitch-container').offset().top;
+		//if stt nav is not present, compensate stt nav for scroll animation
+		if ( topDist <= 536 ) {
+			var dist = dist - 131;
+		}	
+		//scroll animation
+		$('html, body').animate({
+			scrollTop: dist
+		}, 250);
+		return false;
+	}});
+	$('div#deskNav li a.projects').bind({click: function(){
+		var topDist = $(document).scrollTop();
+		var dist = $('#gallery-container').offset().top - 55;
+		if ( topDist < 536 ) {
+			var dist = dist - 131;
+		}
+		$('html, body').animate({
+			scrollTop: dist
+		}, 250);
+		return false;
+	}});
+	$('div#deskNav li a.contact').bind({click: function(){
+		var topDist = $(document).scrollTop();
+		var dist = $('#contact-container').offset().top - 125;
+		if ( topDist < 536 ) {
+			var dist = dist - 131;
+		}
+		$('html, body').animate({
+			scrollTop: dist
+		}, 250);
+		return false;
+	}});
+
 	
 	// ***** FlexSlider Trigger *****
-	
+/*	
 	function startFlexSlider (){
-		
-	
-	
-	
-	
-	
-	
-	$('article.fancy-article#CPI div.gallery-plugin-container').flexslider({
-    	animation: "fade",
-    	controlNav: "thumbnails",
-    	startAt: 0,
-    	slideshow: false,
-    	start: function(){
-    		alert("flexslider loaded");
-    	}/*,
-    	manualControls: "ol.thumbs li" */
-  	});
-	
-  }
-	
+		$('article.fancy-article#CPI div.gallery-plugin-container').flexslider({
+			animation: "fade",
+			controlNav: "thumbnails",
+			startAt: 0,
+			slideshow: false/*,
+			start: function(){
+				alert("flexslider loaded");
+			},
+			manualControls: "ol.thumbs li" */ /*
+		});
+	}
+*/
 	
 	// ***** Gallery thumb click *****
 	
 	$('.fancy-gallery-filmstrip ol.flex-control-nav li img').bind({click: function(){
 		
 		if ( $(this).parents('.fancy-gallery-filmstrip').hasClass('collapsed') ) {
-			$(this).parents('article.fancy-article').children('span.area').slideToggle();
-			$(this).parents('.fancy-gallery-filmstrip').toggleClass('collapsed');
+				$(this).parents('article.fancy-article').children('span.area').slideToggle();
+				$(this).parents('.fancy-gallery-filmstrip').toggleClass('collapsed').toggleClass('open');
+				$(this).parent('a').parent('li').addClass('current');
+				
+				var listItem = $('ol li.current');
+				var curIndex = $(this).parents('ol.thumbs').children('li').index(listItem);
+				$('div.fancy-gallery-filmstrip.open ul.slides').children('li').eq(curIndex).addClass('current');
+
+				
+				
+		} else {
 			
+		
+			if ( $(this).parent('a').parent('li').hasClass('current') ) {
 			
+				$(this).parents('article.fancy-article').children('span.area').slideToggle();
+				$(this).parents('.fancy-gallery-filmstrip').toggleClass('collapsed').toggleClass('open');
+				$('ol.thumbs li.current').removeClass('current');	
+				$('ul.slides li.current').removeClass('current');
+				
+			
+			} else {
+				$('li.current').removeClass('current');
+				$(this).parent('a').parent('li').addClass('current');
+				
+				var listItem = $('ol li.current');
+				var curIndex = $(this).parents('ol.thumbs').children('li').index(listItem);
+				$('ul.slides li.current').removeClass('current');
+				$('div.fancy-gallery-filmstrip.open ul.slides').children('li').eq(curIndex).addClass('current');
+
+				
+			}
+		
+		
+		
+		
 		}
 		
+		
+		
+		
+		return false;
 	}
 	});
 	
@@ -62,59 +147,17 @@ $(document).ready(function(){
 		closeClick	: false,
 		openEffect	: 'none',
 		closeEffect	: 'none',
+		afterClose	: function(){
+    		$('ol.thumbs li.current').removeClass('current');	
+			$('ul.slides li.current').removeClass('current');
+			$('.fancy-gallery-filmstrip.open').parents('article.fancy-article').children('span.area').toggle();
+			$('.fancy-gallery-filmstrip.open').toggleClass('collapsed').toggleClass('open');
+    	}/*,
 		afterLoad	: function(){ 
-					startFlexSlider();
-					//alert("fancy box loaded");				
-								}
+							startFlexSlider();
+							//alert("fancy box loaded");				
+					  }*/
 	});
-	
-	
-	
-	$('.fancy-gallery-filmstrip ol.thumbs li').bind({click: function(){
-	/*	var par = $(this).parents('div.fancy-gallery-filmstrip');
-		if ( $(par).hasClass("collapsed") ) {
-			
-			$(this).parents('div.fancy-gallery-filmstrip').removeClass("collapsed");
-			$(this).parents('article.fancy-article').children('span.area').slideToggle();
-			if ( $(this).hasClass("current") ) {
-			//	var fancyPar = $(this).parents('article.fancy-article').attr('id');
-    		//	$('article.fancy-article#' + fancyPar + ' div.gallery-plugin-container').flexslider();
-			}
-			
-			
-			//alert("detected");
-		} else {
-			
-			if ( $(this).hasClass("current") ) {
-				$(this).parents('div.fancy-gallery-filmstrip').addClass("collapsed");
-				$(this).parents('article.fancy-article').children('span.area').slideToggle();
-			} else {
-				$('.current').removeClass("current");
-				$(this).addClass('current');
-				
-			//	var fancyPar = $(this).parents('article.fancy-article').attr('id');
-    		//	$('article.fancy-article#' + fancyPar + ' div.gallery-plugin-container').flexslider();
-			}
-			
-			
-			//alert("failed");
-		}
-	*/	
-		/*
-		if ( $(this).hasClass("current") ) {
-		//	$(this).addClass("super");
-		} else {
-			$('.current').removeClass("current");
-			$(this).addClass('current');
-			//$('.super').removeClass("super");
-		}
-		*/
-	
-	
-	
-	
-	}	/* end of function */
-	}); /* click bind */
 	
 	
 	
