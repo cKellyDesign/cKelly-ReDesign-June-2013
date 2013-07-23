@@ -7,17 +7,6 @@ body {
 
 /* ---------- Typography ---------- */
 
-/*
-@import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic");
-@font-face {
-	font-family: 'Rockwell Light';
-	src: url('../gfx/RockwellStd-Light.otf') format('opentype'),
-		 url('../gfx/RockwellStd-Light.ttf') format('truetype'),
-		 url('../gfx/RockwellStd-LightItalic.otf') format('opentype'),
-		 url('../gfx/RockwellStd-LightItalic.ttf') format('truetype');
-	font-weight: lighter;
-}
-@import url(http://fonts.googleapis.com/css?family=futurabd:400,700,400italic); */
 @font-face {
 	src: url('../gfx/BoogieNightsShadowNF.ttf');
 	font-family: 'boogie';
@@ -171,13 +160,44 @@ div#logo-body.scrolling {
 	-webkit-transform: rotate3d(1, 0, 0, 70deg);
 	
 }
+#logo-container {
+	margin-top: 36px;
+}
 @media only screen and (max-width: 959px) {
 	div#logo-body {
 		
 	}
+	div#logo-container img {
+		bottom: 200px;
+		right: 30px;
+	}
 }
-#logo-container {
-	margin-top: 36px;
+@media only screen and (max-width: 767px) {
+	div#logo-container a,
+	div#logo-container a div#logo-body {
+		max-width: 100%;
+		margin-left: 0;
+	}
+	div#logo-body {
+		background-image: url(../images/ckelly_logo_420.png);
+	}
+	div#logo-body.landed {
+		height: 271px;
+	}
+	div#logo-container img {
+		bottom: auto;
+		margin-top: 72px;
+		position: relative;
+		right: auto;
+	}
+}
+@media only screen and (max-width: 479px) {
+	div#logo-body {
+		background-image: url(../images/ckelly_logo_300.png);
+	}
+	div#logo-body.landed {
+		height: 194px;
+	}
 }
 
 
@@ -312,9 +332,6 @@ div#deskNav li.logo  {
 	transition: left .5s;
 	margin: 0;
 }
-@media only screen and (max-width: 959px) {
-
-}
 div#deskNav li.logo > a#stt-logo {
 	height: 112px;
 	width: 190px;
@@ -336,9 +353,148 @@ div#deskNav.stickToTop li.logo > a#stt-logo {
 div#deskNav.stickToTop li.logo > a#stt-logo > span {
 
 }
-
+@media only screen and (max-width: 767px) {
+	div#deskNav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	li.logo {
+		display: none !important;
+	}
+	section#header-container.container div#deskNav li.one-third.column,
+	section#header-container.container div#deskNav.stickToTop li.one-third.column {
+		width: 33% !important;
+		background: none;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		margin: 12px 0;
+	}
+	div#deskNav > nav > ul > li > a {
+		background: none !important;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		line-height: 21px;
+		margin: 0;
+		padding-top: 0;
+	}
+	div#deskNav > nav > ul > li > a:hover{
+		text-decoration: underline;
+	}
+	div#deskNav ul {
+		width: 100%;
+	}
+	#logo-container {
+		margin-top: 45px;
+	}
+	section#header-container {
+		z-index: 1000;
+	}
+}
 
 /* --------- Content Area ---------- */
+
+/* --- Section Headers --- */
+div.section-header {
+	margin-bottom: 48px;
+	display: inline-block;
+}
+div.section-header div.one-third.column {
+	background-color: #808080;
+	position: relative;
+}
+div.section-header div.one-third.column div {
+	margin: 4px;
+	background: transparent url(../images/metaltexture.jpg) repeat top left scroll;
+	height: 28px;
+}
+div.section-header div.one-third.column.title {
+	background-color: transparent;
+	
+	
+}
+div.section-header div.one-third.column.title h2 {
+	text-align: center;
+	font-family: 'boogie', Trebuchet, sans-serif;
+	color: #87D5FF;
+	font-size: 64px;
+	line-height: 49px;
+}
+div.section-header div.one-third.column.alpha {
+	
+}
+div.section-header div.one-third.column.alpha:after {
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-left: 36px solid transparent;
+	border-right: 0px solid transparent;
+	border-top: 72px solid #808080;
+}
+div.section-header div.one-third.column.omega:after {
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-right: 36px solid transparent;
+	border-left: 0px solid transparent;
+	border-top: 72px solid #808080;
+}
+@media only screen and (max-width: 959px) {
+	div.section-header div.one-third.column.title h2 {
+		font-size: 50px;
+	}
+}
+@media only screen and (max-width: 767px){
+	div.section-header div.one-third.column.title:before {
+		content: '';
+		height: 0px;
+		width: 0px;
+		border-width: 18px 0 18px 36px;
+		border-style: solid;
+		border-color: transparent transparent transparent #808080;
+		position: absolute;
+		left: 0;
+		top: 8px;
+	}
+	div.section-header div.one-third.column.title:after {
+		content: '';
+		height: 0px;
+		width: 0px;
+		border-width: 18px 36px 18px 0px;
+		border-style: solid;
+		border-color: transparent #808080 transparent transparent;
+		position: absolute;
+		right: 0;
+		top: 8px;
+	}
+	div.section-header div.one-third.column.alpha,
+	div.section-header div.one-third.column.omega,
+	div.section-header div.one-third.column.alpha:after,
+	div.section-header div.one-third.column.omega:after {
+		display: none;
+	}
+}
+@media only screen and (max-width: 479px) {
+	div.section-header div.one-third.column.title h2 {
+		font-size: 36px;
+		line-height: 36px;
+	}
+	div.section-header div.one-third.column.title:before {
+		border-width: 12px 0 12px 24px;
+	}
+	div.section-header div.one-third.column.title:after {
+		border-width: 12px 24px 12px 0;
+	}
+}
+
+/* --- end Section Headers --- */
 
 section#pitch-container {
 	padding: 125px 0 72px;
@@ -355,16 +511,26 @@ section#pitch-container blockquote {
 @media only screen and (max-width: 959px) {
 	section#pitch-container blockquote {
 		margin: 100px 50px;
+		font-size: 28px;
+		line-height: 40px;
 	}
+	
 }
 @media only screen and (max-width: 767px) {
 	section#pitch-container blockquote {
-		margin: 72px 18px;
+		margin: 72px 18px 36px;
+		font-size: 24px;
+		line-height: 36px;
+	}
+	section#pitch-container {
+		padding: 72px 0;
 	}
 }
 @media only screen and (max-width: 479px) {
 	section#pitch-container blockquote {
-		margin: 36px 0px;
+		margin: 36px 0px 12px;
+		font-size: 21px;
+		line-height: 30px;
 	}
 }
 
@@ -423,7 +589,6 @@ ul.highlight-list li:before {
 	position: absolute;
 	display: block;
 }
-
 div#InnDev {
 	border-left: 1px solid #87D5FF;
 	border-right: 1px solid #87D5FF;
@@ -431,78 +596,67 @@ div#InnDev {
 	padding: 0 20px;
 	width: 292px;
 	height: 250px;
-
 }
-
 div#ImpDes {
 	margin: 0 10px 0 0;
 	padding: 0 10px 0 0;
 	width: 292px;
-
 }
-
 div#IdCamp {
 	margin: 0 0 0 10px;
 	padding: 0 0 0 10px;
 	width: 292px;
-
+}
+@media only screen and (max-width: 959px) {
+	div#InnDev,
+	div#ImpDes,
+	div#IdCamp {
+		width: 225px;
+	}
+	section#highlights-container h3 {
+		font-size: 24px;
+	}
+	div#InnDev {
+		height: 300px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	div#InnDev,
+	div#ImpDes,
+	div#IdCamp {
+		width: 420px;
+		padding: 20px 0 0;
+		margin: 0;
+	}
+	section#highlights-container h3 {
+		text-align: center;
+	}
+	div#InnDev {
+		height: auto;
+		border-right: none;
+		border-left: none;
+		border-top: 1px solid #87D5FF;
+		border-bottom: 1px solid #87D5FF;
+	}
+	div#ImpDes {
+		border-top: 1px solid #87D5FF;
+	}
+	div#IdCamp {
+		border-bottom: 1px solid #87D5FF;
+	}
+}
+@media only screen and (max-width: 479px) {
+	div#InnDev,
+	div#ImpDes,
+	div#IdCamp {
+		width: 300px;
+	}
 }
 
 /* ---------- Gallery ---------- */
 section#gallery-container {
 	padding: 72px 0;
 }
-div#galHeader {
-	margin-bottom: 48px;
-	display: inline-block;
-}
-div#galHeader div.one-third.column {
-	background-color: #808080;
-	position: relative;
-}
-div#galHeader div.one-third.column div {
-	margin: 4px;
-	background: transparent url(../images/metaltexture.jpg) repeat top left scroll;
-	height: 28px;
-}
-div#galHeader div.one-third.column.title {
-	background-color: transparent;
-	
-	
-}
-div#galHeader div.one-third.column.title h2 {
-	text-align: center;
-	font-family: 'boogie', Trebuchet, sans-serif;
-	color: #87D5FF;
-	font-size: 64px;
-	line-height: 49px;
-}
-div#galHeader div.one-third.column.alpha {
-	
-}
-div#galHeader div.one-third.column.alpha:after {
-	content: '';
-	height: 0;
-	width: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	border-left: 36px solid transparent;
-	border-right: 0px solid transparent;
-	border-top: 72px solid #808080;
-}
-div#galHeader div.one-third.column.omega:after {
-	content: '';
-	height: 0;
-	width: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-right: 36px solid transparent;
-	border-left: 0px solid transparent;
-	border-top: 72px solid #808080;
-}
-
 div#fancy-hide {
 	display: none;
 }
@@ -550,6 +704,11 @@ ul.galleryList li a:hover div.thumbWrap span {
 ul.galleryList li a img {
 	width: 100%;
 	height: auto;
+}
+@media only screen and (max-width: 767px) {
+	ul.galleryList li {
+		margin-bottom: 20px !important;
+	}
 }
 
 article.fancy-article {
@@ -601,9 +760,6 @@ article.fancy-article {
 }
 .fancy-gallery-filmstrip.collapsed {
 	max-height: 160px;
-}
-.fancy-gallery-image {
-
 }
 .fancy-gallery-image img {
 
@@ -744,6 +900,29 @@ ul.slides li a img {
 ul.flex-direction-nav {
 	display: none;
 }
+@media only screen and (max-width: 767px) {
+	.fancy-gallery-image {
+		display: none !important;
+	}
+	.fancy-gallery-header {
+		text-align: center;
+		margin: 10px 0 !important;
+	}
+	.fancy-gallery-filmstrip.collapsed {
+		max-height: none;
+	}
+	.fancy-gallery-filmstrip.collapsed ol.flex-control-nav {
+		margin: 0 !important;
+	}
+	.fancy-gallery-filmstrip.collapsed ol.flex-control-nav li {
+		margin: 10px 0;
+	}
+	article.fancy-article {
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+}
+
 
 /* ---------- Contact Section ---------- */
 
@@ -755,6 +934,12 @@ div.contactpar p {
 }
 div.contactpar p.blue {
 	text-align:center;
+}
+@media only screen and (max-width: 767px) {
+	div.contactpar p {
+		font-size: 24px;
+    	line-height: 30px;
+	}
 }
 article#contact-form {
 	background: #909090 url(../images/fancy-bg.jpg) repeat top left scroll;
@@ -831,6 +1016,33 @@ article#contact-form input[type=submit]:active {
 	background-image: url("../images/navaBG.jpg")\9;
 }
 
+@media only screen and (max-width: 959px) {
+	article#contact-form input[type="text"],
+	article#contact-form textarea {
+		width: 92.5%;
+	}
+	article#contact-form input[type="submit"] {
+		margin: 0 !important;
+	}
+}
+@media only screen and (max-width: 767px) {
+	article#contact-form input[type="text"], 
+	article#contact-form textarea {
+		margin-left: 11px;
+	}
+	article#contact-form input[type="submit"] {
+		margin: 0 0 18px 10px !important;
+	}
+}
+@media only screen and (max-width: 479px) {
+	article#contact-form input[type="text"],
+	article#contact-form textarea {
+		width: 89.75%;
+	}
+	article#contact-form input[type="submit"] {
+		width: 93%;
+	}
+}
 
 /* ---------- Testing ---------- */
 

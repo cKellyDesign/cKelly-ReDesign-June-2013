@@ -14,7 +14,13 @@ function popitup2(url) {
 
 
 $(document).ready(function(){
-
+	var pageW = $(window).width();
+	if ( pageW <= 767 ) {
+		$('body').addClass("m");
+	} else {
+		$('body').addClass("d");
+	}
+	
 	// ***** Nav Scripts *****
 	// doc ready add or remove class stickToTop
 	var topDist = $(document).scrollTop();
@@ -86,10 +92,14 @@ $(document).ready(function(){
 */
 	
 	// ***** Gallery thumb click *****
-	
+
+var pageW = $(window).width();
+if ( pageW >= 768 ) {
+
 	$('.fancy-gallery-filmstrip ol.flex-control-nav li img').bind({click: function(){
 		
 		if ( $(this).parents('.fancy-gallery-filmstrip').hasClass('collapsed') ) {
+		
 				$(this).parents('article.fancy-article').children('span.area').slideToggle();
 				$(this).parents('.fancy-gallery-filmstrip').toggleClass('collapsed').toggleClass('open');
 				$(this).parent('a').parent('li').addClass('current');
@@ -97,12 +107,9 @@ $(document).ready(function(){
 				var listItem = $('ol li.current');
 				var curIndex = $(this).parents('ol.thumbs').children('li').index(listItem);
 				$('div.fancy-gallery-filmstrip.open ul.slides').children('li').eq(curIndex).addClass('current');
-
-				
-				
+					
 		} else {
 			
-		
 			if ( $(this).parent('a').parent('li').hasClass('current') ) {
 			
 				$(this).parents('article.fancy-article').children('span.area').slideToggle();
@@ -110,8 +117,8 @@ $(document).ready(function(){
 				$('ol.thumbs li.current').removeClass('current');	
 				$('ul.slides li.current').removeClass('current');
 				
-			
 			} else {
+			
 				$('li.current').removeClass('current');
 				$(this).parent('a').parent('li').addClass('current');
 				
@@ -120,26 +127,17 @@ $(document).ready(function(){
 				$('ul.slides li.current').removeClass('current');
 				$('div.fancy-gallery-filmstrip.open ul.slides').children('li').eq(curIndex).addClass('current');
 
-				
 			}
-		
-		
-		
-		
 		}
-		
-		
-		
-		
 		return false;
 	}
 	});
-	
+}	
 	
 	
 	// ***** Fancy Trigger *****
 	
-	$("a.galThumb").fancybox({
+	$("body.d a.galThumb").fancybox({
 		fitToView	: false,
 		width		: '95%',
 		height		: '100%',
@@ -157,6 +155,9 @@ $(document).ready(function(){
 							startFlexSlider();
 							//alert("fancy box loaded");				
 					  }*/
+	});
+	$("body.m a.galThumb").fancybox({
+		type		: 'inline'
 	});
 	
 	
