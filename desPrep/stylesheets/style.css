@@ -900,6 +900,9 @@ ul.slides li a img {
 ul.flex-direction-nav {
 	display: none;
 }
+li xmp {
+	line-height: 1.2;
+}
 @media only screen and (max-width: 767px) {
 	.fancy-gallery-image {
 		display: none !important;
